@@ -11,7 +11,7 @@ const indexRouter = require(`./routes/index`)
 const app= express()
 
 // req DB
-
+require(`./config/database`)
 
 
 // set view engine
