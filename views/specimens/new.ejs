@@ -7,5 +7,13 @@
 </head>
 <body>
     <h1>Add New Lab test</h1>
+    <a href="/">home</a>
+
+    <form action="/specimens/new" method="post">
+        Test: <input type="text" name = "test">
+        Tube Color(s): <input type="text" name= 'collectionColor' placeholder="seperate multiples by ,">
+        <input type="submit" value = "Add to Database">
+    </form>
+
 </body>
 </html>
