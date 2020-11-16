@@ -3,7 +3,7 @@ const port = 3000
 const express = require(`express`)
 const morgan = require(`morgan`)
 const indexRouter = require(`./routes/index`)
-// const specimenRouter = require(`/routes/specimens`)
+const specimenRouter = require(`./routes/specimens`)
 // const colorRouter = require(`/routes/colors`)
 // const userRouter = require(`/routes/users`)
 
@@ -24,7 +24,7 @@ app.use(express.urlencoded({extended:false}))
 
 // routes
 app.use(`/`, indexRouter)
-// app.use(`/specimens`, specimenRouter)
+app.use(`/specimens`, specimenRouter)
 // app.use(`/color`, colorRouter)
 // app.use(`/users`, userRouter)
 
