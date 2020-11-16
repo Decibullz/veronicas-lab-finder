@@ -1,10 +1,11 @@
+require('dotenv').config();
 const mongoose = require(`mongoose`)
-
 const connection = require(`../utils/database`)
+const connectionURI = process.env.URI
 
 const db = mongoose.connection
 
-mongoose.connect(connection.URI,{
+mongoose.connect(connectionURI,{
     useNewUrlParser:true,
     useCreateIndex:true,
     useFindAndModify: true,
