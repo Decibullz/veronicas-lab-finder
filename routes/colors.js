@@ -7,6 +7,5 @@ router.get(`/green`, colorCtrl.green)
 router.get(`/red`, colorCtrl.red)
 router.get(`/blue`, colorCtrl.blue)
 router.get(`/sst`, colorCtrl.sst)
-router.get(`/swab`, colorCtrl.swab)
 
 module.exports = router
