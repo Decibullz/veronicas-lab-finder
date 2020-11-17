@@ -5,7 +5,7 @@ const morgan = require(`morgan`)
 const methodOverride = require('method-override')
 const indexRouter = require(`./routes/index`)
 const specimenRouter = require(`./routes/specimens`)
-// const colorRouter = require(`/routes/colors`)
+const colorRouter = require(`./routes/colors`)
 // const userRouter = require(`/routes/users`)
 
 // sett app
@@ -26,7 +26,7 @@ app.use(express.urlencoded({extended:false}))
 // routes
 app.use(`/`, indexRouter)
 app.use(`/specimens`, specimenRouter)
-// app.use(`/color`, colorRouter)
+app.use(`/colors`, colorRouter)
 // app.use(`/users`, userRouter)
 
 // listen
