@@ -15,28 +15,26 @@
         </div>
     </div>
     <%- include(`../nav.ejs`)%>
-    <h2>View all specimens</h2>
+    <h2>Specimen Tests:</h2>
 
     <ol>
         <% specimens.forEach(function(specimen) { %>
         <li>
-            <form action="/specimens/<%=specimen._id%>?_method=DELETE" method="POST">
-                <input class ='btn' type="submit" value="DELETE">
-            </form>
-            <form action="/specimens/<%=specimen._id%>/edit">
-                <input class ='btn' type="submit" value="Edit">
-            </form>
-
-                <p>Test:</p>
-                <p><%= specimen.test %> </p>
+            <h2><%= specimen.test %> </h2>
             <br>
-            <p>Test Color(s):</p>
-            <% specimen.collectionColor.forEach(function(col) { %>
-           <p><%= col %></p>
-            <% }); %>
-            <br>
-           <p>Serum Separator Tube:</p> 
-            <p><%= specimen.serumTube ? 'Yes' : 'No' %></p>
+            <h3>Test Color(s):</h3>
+            <% specimen.collectionColor.forEach(function(col) {%> 
+                <h3><%= col %></h3>
+                <% }); %>
+                <br>
+                <h3>Serum Separator Tube: <%= specimen.serumTube ? 'Yes' : 'No' %></h3>
+                <br>
+                <form action="/specimens/<%=specimen._id%>?_method=DELETE" method="POST">
+                    <input class ='btn' type="submit" value="DELETE">
+                </form>
+                <form action="/specimens/<%=specimen._id%>/edit">
+                    <input class ='btn' type="submit" value="Edit">
+                </form>
         </li>
         <% }); %>
     </ol>
