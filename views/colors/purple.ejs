@@ -13,5 +13,14 @@
         </div>
     </div>
     <%- include(`../nav.ejs`)%>
+    <h2>YOU PICKED PURPLE</h2>
+    <h3>Labs Attached to this color are:</h3>
+    <ol>
+        <%purples.forEach(function(purple){%>
+            <li>
+                <h3><%= purple.test %> </h3>
+            </li>
+        <%}) %>
+    </ol>
 </body>
 </html>

@@ -13,5 +13,14 @@
         </div>
     </div>
     <%- include(`../nav.ejs`)%>
+    <h2 class="red-txt">YOU PICKED RED</h2>
+    <h3>Labs Attached to this color are:</h3>
+    <ol>
+        <%reds.forEach(function(red){%>
+            <li>
+                <h3><%= red.test %> </h3>
+            </li>
+        <%}) %>
+    </ol>
 </body>
 </html>

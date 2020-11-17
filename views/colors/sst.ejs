@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../CSS/style.css">
-    <title>Lined</title>
+    <title>Swab</title>
 </head>
 <body>
     <div class="hero-image">
@@ -13,5 +13,14 @@
         </div>
     </div>
     <%- include(`../nav.ejs`)%>
+    <h2>YOU PICKED SERUM SEPARATOR TUBE</h2>
+    <h3>Labs Attached to this are:</h3>
+    <ol>
+        <%ssts.forEach(function(sst){%>
+            <li>
+                <h3><%= sst.test %> </h3>
+            </li>
+        <%}) %>
+    </ol>
 </body>
 </html>
