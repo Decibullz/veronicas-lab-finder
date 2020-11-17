@@ -36,6 +36,13 @@ h2{
   align-items: center;
   color:#9802b6
 }
+h3{
+  display: flex;
+  font-size:36px;
+  justify-content: center;
+  align-items: center;
+  color:white
+}
   @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
 
   body{
@@ -164,22 +171,35 @@ p{
   font-size: 30px;
   text-align: center;
 }
-  .purple{
+.purple{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
   background-color: purple;
 }
 .red{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
   background-color: red;
 }
 .blue{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
   background-color: blue;
 }
 .green{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
   background-color: green;
 }
-.lines{
-  background-color: gray;
-}
-.swab, .knowlab{
+.swab, .knowlab, .sst{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -194,8 +214,18 @@ input{
   height:40px;
 }
 form{
+  align-items: center;
   display: inline-block;
 }
 .btn{
   width:100px;
+}
+.blue-txt{
+  color:blue
+}
+.green-txt{
+  color:green
+}
+.red-txt{
+  color:red
 }
