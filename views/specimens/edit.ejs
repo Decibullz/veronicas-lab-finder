@@ -16,7 +16,7 @@
     <h2>Lab Edit</h2>
     <form action="/specimens/<%=specimen._id %>?_method=PUT" method="POST">
         Test: <input type="text" name = "test" value="<%= specimen.test %>">
-        <!-- Tube Color(s): <input type="text" name= 'collectionColor' placeholder="seperate multiples by ,"> -->
+        Tube Color(s): <input type="text" name= 'collectionColor' value ="<%=specimen.collectionColor.join(", ")%> " placeholder="seperate multiples by ,">
         Serum Seperator Tube:<input type="checkbox" name='serumTube'>
         <input type="submit" value = "Update Database">
 </form>
