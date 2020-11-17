@@ -1,12 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/style.css">
     <title>View all specimens</title>
 </head>
+
 <body>
-    <h1>View all specimens</h1>
-    <a href="/">home</a>
+    <div class="hero-image">
+        <div class="hero-text">
+            <h1 style="font-size:50px">Veronica's Lab Finder</h1>
+        </div>
+    </div>
+    <%- include(`../nav.ejs`)%>
+    <h2>View all specimens</h2>
+
+    <ol>
+        <% specimens.forEach(function(specimen) { %>
+        <li>
+            <form action="/specimens/<%=specimen._id%>?_method=DELETE" method="POST">
+                <input class ='btn' type="submit" value="DELETE">
+            </form>
+            <form action="/specimens/<%=specimen._id%>/edit">
+                <input class ='btn' type="submit" value="Edit">
+            </form>
+
+                <p>Test:</p>
+                <p><%= specimen.test %> </p>
+            <br>
+            <p>Test Color(s):</p>
+            <% specimen.collectionColor.forEach(function(col) { %>
+           <p><%= col %></p>
+            <% }); %>
+            <br>
+           <p>Serum Separator Tube:</p> 
+            <p><%= specimen.serumTube ? 'Yes' : 'No' %></p>
+        </li>
+        <% }); %>
+    </ol>
 </body>
+
 </html>

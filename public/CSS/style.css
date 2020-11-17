@@ -28,6 +28,7 @@ nav{
   justify-content: center;
   align-items: center;
 }
+
 h2{
   display: flex;
   font-size:36px;
@@ -143,8 +144,14 @@ h2{
       }
   }
 
+p{
+  display: inline;
+  color:#9802b6
+}
 
-
+.btn{
+  display: inline;
+}
 .grid-container{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -176,4 +183,19 @@ h2{
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+p{
+  display: inline-block;
+  font-size: 30px;
+}
+input{
+  width:250px;
+  height:40px;
+}
+form{
+  display: inline-block;
+}
+.btn{
+  width:100px;
 }

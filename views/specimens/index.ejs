@@ -3,11 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/style.css">
     <title>Specimen home</title>
 </head>
 <body>
-    <h1>Specimen home</h1>
-    <a href="/specimens/all">view all</a>
-    <a href="/specimens/new">add new</a>
+    <div class="hero-image">
+        <div class="hero-text">
+            <h1 style="font-size:50px">Veronica's Lab Finder</h1>
+        </div>
+    </div>
+    <%- include(`../nav.ejs`)%>
+    <h2>Specimen home</h2>
 </body>
 </html>

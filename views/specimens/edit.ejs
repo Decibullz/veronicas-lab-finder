@@ -3,9 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>specimen edit</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <title>Lab Edit</title>
 </head>
 <body>
-    <h1>specimen edit</h1>
+    <div class="hero-image">
+        <div class="hero-text">
+            <h1 style="font-size:50px">Veronica's Lab Finder</h1>
+        </div>
+    </div>
+    <%- include(`../nav.ejs`)%>
+    <h2>Lab Edit</h2>
+    <form action="/specimens/<%=specimen._id %>?_method=PUT" method="POST">
+        Test: <input type="text" name = "test" value="<%= specimen.test %>">
+        <!-- Tube Color(s): <input type="text" name= 'collectionColor' placeholder="seperate multiples by ,"> -->
+        Serum Seperator Tube:<input type="checkbox" name='serumTube'>
+        <input type="submit" value = "Update Database">
+</form>
 </body>
 </html>

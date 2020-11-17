@@ -3,15 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/style.css">
     <title>Add New Lab test</title>
 </head>
 <body>
-    <h1>Add New Lab test</h1>
-    <a href="/">home</a>
+    <div class="hero-image">
+        <div class="hero-text">
+            <h1 style="font-size:50px">Veronica's Lab Finder</h1>
+        </div>
+    </div>
+    <%- include(`../nav.ejs`)%>
+    <h2>Add New Lab test</h2>
 
     <form action="/specimens/new" method="post">
-        Test: <input type="text" name = "test">
-        Tube Color(s): <input type="text" name= 'collectionColor' placeholder="seperate multiples by ,">
+        <p>Lab Test:</p> <input type="text" name = "test" id ="test">
+        <p>Tube Color(s):</p>  <input type="text" id ="collectionColor" name= 'collectionColor' placeholder="seperate multiples by ,">
+        <p>Serum Seperator Tube:</p> <input type="checkbox" name='serumTube' value = "true">
         <input type="submit" value = "Add to Database">
     </form>
 

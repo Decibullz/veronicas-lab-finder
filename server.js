@@ -2,6 +2,7 @@
 const port = 3000
 const express = require(`express`)
 const morgan = require(`morgan`)
+const methodOverride = require('method-override')
 const indexRouter = require(`./routes/index`)
 const specimenRouter = require(`./routes/specimens`)
 // const colorRouter = require(`/routes/colors`)
@@ -13,12 +14,12 @@ const app= express()
 // req DB
 require(`./config/database`)
 
-
 // set view engine
 app.set(`view engine`, `ejs`)
 
 app.use(morgan(`dev`))
 app.use(express.static(`public`))
+app.use(methodOverride('_method'))
 app.use(express.urlencoded({extended:false}))
 
 
