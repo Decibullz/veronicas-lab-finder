@@ -156,7 +156,6 @@ p{
   display: inline;
   color:#9802b6
 }
-
 .btn{
   display: inline;
 }
@@ -215,8 +214,10 @@ input{
   height:40px;
 }
 form{
+  display: flex;
+  justify-content: center;
   align-items: center;
-  display: inline-block;
+  align-items: center;
 }
 .btn{
   width:100px;
