@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../CSS/style.css">
-    <title>Specimen home</title>
+    <link rel="stylesheet" href="/CSS/style.css">
+    <title>Lab Type</title>
 </head>
 <body>
     <div class="hero-image">
@@ -13,6 +13,17 @@
         </div>
     </div>
     <%- include(`../nav.ejs`)%>
-    <h2>Specimen home</h2>
+    <h2>Enter Lab Type</h2>
+    <form action="/specimens/index" method="POST" id='search'>
+        <h2>Lab Test:</h2> <input type="text" name = "test">
+        <input type="submit" value = "Query Database">
+        </form>
+        <%if(searched === null) {%>
+        <% }else if(searched[0] === undefined){%>
+            <h2>Check your spelling and try again</h2>
+        <% } else { %>
+            <h2><%=searched[0].test%> Can use: <%= searched[0].collectionColor.join(` and `)%> Test Tubes</h2>
+           <h2><%= searched[0].serumTube ? 'You can also' : 'You can not' %> use a Serum Separator Tube</h2>
+        <%}%>    
 </body>
-</html>
+</html> 
