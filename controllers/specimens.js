@@ -7,14 +7,8 @@ const search = (req, res)=>{
     const searchBar= req.body
     Specimen.find(searchBar).sort('test').exec((err,searched)=>{
         res.render(`specimens/index`, {searched})
-        console.log(searchBar)
-        console.log(searched)
         })
     }
-
-// [0].collectionColor
-
-
 
 const newSpecimen = (req,res) => res.render(`specimens/new`)
 
@@ -22,7 +16,6 @@ const deleteSpec = (req,res)=>
     Specimen.findByIdAndDelete(req.params.id, (err, deletedSpecimen)=>
     res.redirect(`/specimens/all`))
     
-
 const update = (req,res)=>{
     req.body.serumTube=!!req.body.serumTube
     if(req.body.collectionColor) {
