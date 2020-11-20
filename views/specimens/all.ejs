@@ -29,12 +29,12 @@
                 <br>
                 <h3>Serum Separator Tube: <%= specimen.serumTube ? 'Yes' : 'No' %></h3>
                 <br>
-                <form action="/specimens/<%=specimen._id%>?_method=DELETE" method="POST">
+                <!-- <form action="/specimens/%=specimen._id%>?_method=DELETE" method="POST">
                     <input class ='btn' type="submit" value="DELETE">
                 </form>
-                <form action="/specimens/<%=specimen._id%>/edit">
+                <form action="/specimens/%=specimen._id%>/edit">
                     <input class ='btn' type="submit" value="Edit">
-                </form>
+                </form> -->
         </li>
         <% }); %>
     </ol>
