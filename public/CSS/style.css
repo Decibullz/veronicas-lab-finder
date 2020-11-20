@@ -45,17 +45,16 @@ h3{
   color:white
 }
 
-  @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
-  
-  body{
-      /* display: flex; */
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      background: #050801;
-      font-family: 'Dancing Script', cursive;
-      font-weight: bold;
-  }
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+body{
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #050801;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+}
   a{
       position: relative;
       display: inline-block;
