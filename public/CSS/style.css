@@ -28,7 +28,9 @@ nav{
   justify-content: center;
   align-items: center;
 }
-
+h1{
+  font-size: 50px;
+}
 h2{
   display: flex;
   font-size:36px;
@@ -230,4 +232,56 @@ form{
 }
 .red-txt{
   color:red
+}
+
+
+
+
+@media only screen and (max-width: 600px) {
+  .hero-image {
+    height: 25%;
+  }
+ h1{
+   font-size: 25px;
+ }
+  h2{
+    font-size: 20px;
+  }
+  a{
+    font-size: 10px;
+    padding:20;
+    margin: 5;
+    color: #9802b6;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.5s;
+    letter-spacing: 0px;
+    overflow: hidden;
+    margin-right: 5px;
+   
+}
+  .grid-item {
+    grid-template-columns: auto auto;
+    height: 50px;
+    padding: 5px;
+    font-size: 15px;
+    text-align: center;
+  }
+  .blue{
+    font-size: 1px;
+    color:blue
+  }
+  .green{
+    font-size: 1px;
+    color:green
+  }
+  .red{
+    font-size: 1px;
+    color:red
+  }
+  .purple{
+    font-size: .5px;
+    color:purple
+  }
+
 }
