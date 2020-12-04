@@ -11,7 +11,7 @@ const green = (req,res)=>{
     })
 }
 const red = (req,res)=>{
-    Color.find({collectionColor:{ $in: ["Red", "reds"]}}).sort('test').exec((err,reds)=>{
+    Color.find({collectionColor:{ $in: ["Red", "red"]}}).sort('test').exec((err,reds)=>{
         res.render(`colors/red`, {reds})
     })
 }
